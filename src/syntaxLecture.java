@@ -23,6 +23,8 @@ public class syntaxLecture {
         //casting = converting a value into another data type
         System.out.println(imafloat);
 
+        String myString = "seven"; //Strings use double quotes
+        char letter = 'a'; //chars use single quotes
 
     }
 }
