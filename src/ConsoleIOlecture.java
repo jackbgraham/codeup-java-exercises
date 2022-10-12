@@ -26,7 +26,8 @@ public class ConsoleIOlecture {
 
         System.out.println("Enter a sentence:");
         String userInput2 = scanner.nextLine();
-        System.out.printf("Your sentence was %s.%n", userInput2);
+        System.out.printf("printf - Your sentence was: %s%n", userInput2);
+        System.out.println("println - Your sentence was: " + userInput2);
 
         System.out.println("Enter a number");
         int userNumber = scanner.nextInt();
@@ -34,6 +35,22 @@ public class ConsoleIOlecture {
         System.out.printf("Your number was: %d", userNumber);
 
         //if you put scanner.next and then scanner.nextLine, both of those will draw from the same line entry
+
+        //java apps can run on windows, mac and linux
+        //java is a "higher level language" it is source code
+
+        //class contains everything, has members
+        //methods part of the class which does something
+        //statements - tell the computer something
+        //properties - store something
+
+        //"public" access modifier, who can use it
+        //"static" means no instance of this class is needed
+        //"object" instance of a class
+        //"main" this is the main method, it is required or the program will not run, main is not required if making a library
+
+        //src folder contains source code
+        //bin folder contains compiled code, I think out is the equivalent in IntelliJ, but maybe not
 
 
     }
