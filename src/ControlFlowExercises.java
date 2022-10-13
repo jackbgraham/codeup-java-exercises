@@ -3,7 +3,7 @@ public class ControlFlowExercises {
         //For all of the following exercises, create a new class named ControlFlowExercises with a main method.
         // After each exercise, commit your changes, then replace your code in the main method with the next exercise.
 
-
+/////Section 1//////Loop Basics//////////////////
 //    int i = 5;
 //    while (i <= 15){
 //        System.out.println("loop time bebe " + i);
@@ -43,7 +43,26 @@ public class ControlFlowExercises {
 //        for (long p = 2; p < 1000000; p*=p){
 //            System.out.println(p);
 //        }
-//////////////////////////////////////
+/////Section 2//////Fizzbuzz//////////////////
+//        Write a program that prints the numbers from 1 to 100.
+//        For multiples of three: print “Fizz” instead of the number.
+//        For the multiples of five: print “Buzz”.
+//        For numbers which are multiples of both three and five: print “FizzBuzz”.
+
+        for (int i = 0; i < 100; i++) {
+            if ((i % 3 == 0) && (i % 5 == 0)) {
+                System.out.println("FizzBuzz");
+            }
+            else if (i % 3 == 0){
+                    System.out.println("Fizz");
+            }
+            else if(i % 5 == 0){
+                    System.out.println("Buzz");
+            }
+            else {
+                    System.out.println(i);
+                    }
+                }
 
 
     }
