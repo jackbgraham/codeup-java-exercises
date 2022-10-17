@@ -52,6 +52,23 @@ public class ConsoleIOlecture {
         //src folder contains source code
         //bin folder contains compiled code, I think out is the equivalent in IntelliJ, but maybe not
 
+        // try catch prevents the system from throwing errors when the wrong data type is entered
+        //the stuff below doesn't work correctly right now
+
+//        int age;
+//
+//        System.out.println("Please enter your age:");
+//        age = scanner.nextInt();
+//
+////        float floatAge;
+//
+//        try {
+//            age = scanner.nextInt();
+//        }
+//        catch (NumberFormatException nfe) {
+//            System.out.println("Hey, you didn't enter a number");
+//        }
+//        System.out.println("Your age is " + age);
 
     }
 }

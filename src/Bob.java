@@ -12,5 +12,19 @@ public class Bob {
         System.out.println("Bob is a poorly made chatbot, talk to Bob");
         String userInput = sc.next();
 
+        if(userInput.contains("?")){
+            System.out.println(resp1);
+        }
+        else if(userInput.contains("!")){
+            System.out.println(resp2);
+        }
+        else if(userInput.contains("")){
+            System.out.println(resp3);
+        }
+        else{
+            System.out.println(resp4);
+        }
+
+
     }
 }
