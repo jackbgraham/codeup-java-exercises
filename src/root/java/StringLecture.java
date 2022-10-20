@@ -1,3 +1,5 @@
+package root.java;
+
 public class StringLecture {
     public static void main(String[] args) {
 

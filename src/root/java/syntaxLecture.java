@@ -1,3 +1,5 @@
+package root.java;
+
 public class syntaxLecture {
     public static void main(String[] args) {
         //declare variable without initializing

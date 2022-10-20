@@ -1,3 +1,5 @@
+package root.java;
+
 public class Person {
 
     private String name;
@@ -24,5 +26,9 @@ public class Person {
     //"explicit default"
     public Person(String name) {
         this.name = name;
+    }
+
+    public String toString(){
+        return name;
     }
 }

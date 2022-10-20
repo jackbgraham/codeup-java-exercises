@@ -1,3 +1,5 @@
+package root.java;
+
 import java.util.Formatter;
 import java.util.Scanner;
 
