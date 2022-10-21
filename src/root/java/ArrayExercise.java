@@ -43,5 +43,7 @@ public class ArrayExercise {
         System.out.println("servername: " + server3);
 
 
+
+
     }
 }

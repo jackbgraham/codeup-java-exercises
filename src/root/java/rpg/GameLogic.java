@@ -1,4 +1,5 @@
 package root.java.rpg;
+
 import java.util.Scanner;
 //from tutorial
 //https://www.youtube.com/watch?v=L4eqsWCvoB0&list=PLiuAYTl0L-gHgqyWtUKAAhtrTymOLHd28&index=2
@@ -8,6 +9,10 @@ public class GameLogic {
     static Player player;
 
     public static boolean isRunning;
+
+    //Story elements
+    public static int place = 0, act;
+    public static String[] places = {"The Parking Lot of Desolation", "The Dank Drainage Tunnels", "The Trailer Park of Sorrow", "Taco Bell"};
 
     //take user input
     public static int readInt(String prompt, int userChoices){
@@ -81,6 +86,9 @@ public class GameLogic {
                 nameSet = true;
         }while(!nameSet);
 
+        //print story intro
+        Story.printIntro();
+
         //create new player object with the name
         player = new Player();
 
@@ -90,7 +98,52 @@ public class GameLogic {
         //start main game loop (next part)
         gameloop();
     }
-    public static void gameloop(){
+    //continue method
+    public static void continueJourney(){
 
+    }
+
+    //printing character info
+    public static void characterInfo(){
+        clearConsole();
+        printHeading("CHARACTER INFO");
+        System.out.println(player.name + "\tHP: " + player.hp + "/" + player.maxHP);
+        printSeparator(20);
+        System.out.println("XP: " + player.xp);
+
+        //player selected upgrades
+        if(player.numAtkUpgrades > 0){
+            System.out.println("Offensive trait: " + player.atkUpgrades[player.numAtkUpgrades - 1]);
+            printSeparator(20);
+        }
+        if(player.numDefUpgrades > 0){
+            System.out.println("Offensive trait: " + player.defUpgrades[player.numDefUpgrades - 1]);
+        }
+        anythingToContinue();
+    }
+
+    //main menu
+    public static void printMenu(){
+        clearConsole();
+        printHeading(places[place]);
+        System.out.println("Choose an action: ");
+        printSeparator(20);
+        System.out.println("(1) Continue on your journey");
+        System.out.println("(2) Character Info");
+        System.out.println("(3) Exit Game");
+    }
+
+    //the main loop
+    public static void gameloop(){
+        while(isRunning){
+            printMenu();
+            int input = readInt("-> ", 3);
+            if(input == 1)
+                continueJourney();
+            else if(input == 2)
+                characterInfo();
+            else
+                isRunning = false;
+        }
     }
 }
