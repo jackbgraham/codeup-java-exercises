@@ -33,7 +33,12 @@ public class Input {
      */
     public int getInt(){
         System.out.println("Enter an integer:");
-        return scanner.nextInt();
+        try {
+            return scanner.nextInt();
+        } catch (NumberFormatException e) {
+            System.out.println("invalid entry");
+            return scanner.nextInt();
+        }
     }
 
     public int getInt(String prompt){

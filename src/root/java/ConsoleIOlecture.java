@@ -71,6 +71,7 @@ public class ConsoleIOlecture {
 //            System.out.println("Hey, you didn't enter a number");
 //        }
 //        System.out.println("Your age is " + age);
+        //System.out.println("yeehaw");
 
     }
 }
